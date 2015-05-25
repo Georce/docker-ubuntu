@@ -3,7 +3,7 @@ MAINTAINER sameer@damagehead.com
 
 # Change Aliyun Mirrors
 
-RUN sed -i s@mirrors.aliyun.com@archive.ubuntu.com@g /etc/apt/sources.list
+RUN sed -i s@archive.ubuntu.com@mirrors.aliyun.com@g /etc/apt/sources.list
 
 RUN echo 'APT::Install-Recommends 0;' >> /etc/apt/apt.conf.d/01norecommends \
  && echo 'APT::Install-Suggests 0;' >> /etc/apt/apt.conf.d/01norecommends \
@@ -12,4 +12,4 @@ RUN echo 'APT::Install-Recommends 0;' >> /etc/apt/apt.conf.d/01norecommends \
  && rm -rf /var/lib/apt/lists/* # 20150504x
 
 # Change timezone to Shanghai
-\cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+RUN \cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
