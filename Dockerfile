@@ -1,4 +1,4 @@
-FROM index.alauda.cn/dockerlibrary/ubuntu:trusty-20150427
+FROM index.alauda.cn/library/ubuntu:trusty-20150427
 MAINTAINER sameer@damagehead.com
 
 # Change Aliyun Mirrors
